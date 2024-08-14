@@ -18,7 +18,7 @@ const Home = () => {
   });
   console.log(posts)
   return (
-    <div className="space-y-16">
+    <div className="space-y-16 mb-16">
       <UserForm refetch={refetch} />
       <Posts posts={posts} />
     </div>
