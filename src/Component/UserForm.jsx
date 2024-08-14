@@ -4,6 +4,7 @@ import { ImSpinner3 } from "react-icons/im";
 import GetImage from "./GetImage";
 import axios from "axios";
 import PropTypes from 'prop-types'
+import GetImgbb from "./GetImgbb";
 const UserForm = ({ refetch }) => {
   const [loading, setLoading] = useState(false);
   const [imagePreview, setImagePreview] = useState();
@@ -24,7 +25,8 @@ const UserForm = ({ refetch }) => {
       return;
     }
     try {
-      const photo = await GetImage(image);
+      const photo = await GetImgbb(image);
+      console.log(photo)
       const posts = {
         details,
         image: photo,
@@ -80,6 +82,7 @@ const UserForm = ({ refetch }) => {
               ></textarea>
             </div>
 
+            <div className="flex justify-between items-center">
             <div className="flex gap-6 items-center">
               <div className="flex items-center">
                 <input
@@ -114,11 +117,11 @@ const UserForm = ({ refetch }) => {
               {imagePreview && <img className="h-12 w-12" src={imagePreview} />}
             </div>
 
-            <div className="mt-4 flex justify-end">
+            <div className="  inline-block justify-end">
               <button
                 type="submit"
                 disabled={loading}
-                className="inline-block w-full   rounded-lg bg-rose-500 px-5 py-3 font-medium text-white disabled:bg-rose-400 disabled:cursor-not-allowed"
+                className="inline-block w-full   rounded-lg bg-rose-500 px-8 py-3 font-medium text-white disabled:bg-rose-400 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <ImSpinner3 size={24} className="animate-spin m-auto" />
@@ -126,6 +129,7 @@ const UserForm = ({ refetch }) => {
                   "Post"
                 )}
               </button>
+            </div>
             </div>
           </form>
         </div>

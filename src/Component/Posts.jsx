@@ -9,16 +9,16 @@ const Posts = ({posts}) => {
                 {/*  <!--  Image --> */}
                 <figure>
                   <img
-                    src={import.meta.env.VITE_API_URL + '/' + post?.image}
+                    src={post?.image}
                     alt="card image"
                     className="aspect-video w-full"
                   />
                 </figure>
                 {/*  <!-- Body--> */}
-                <div className="p-6">
+                <div className="p-6 bg-base-200">
                   <header className="">
                    
-                    <p className="text-sm text-slate-600">{post.details}</p>
+                    <p className="text-lg text-slate-700">{post.details}</p>
                   </header>
                 </div>
               </div>
