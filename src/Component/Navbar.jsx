@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className="flex-1">
           <Link to={'/'}  className=" hover:scale-105 text-3xl font-bold bg-gradient-to-r from-pink-500 via-red-500 to-rose-500 bg-clip-text text-transparent">Gawsea Saree</Link>
         </div>
-        <ul className="flex gap-12">{navLinks}</ul>
+        <ul className="flex gap-10">{navLinks}</ul>
         {/* <div className="flex-none">
           <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
